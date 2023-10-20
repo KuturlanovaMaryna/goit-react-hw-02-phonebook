@@ -1,0 +1,9 @@
+.contactForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.addBtn{
+    width: 90px;
+    height: 30px;
+}
