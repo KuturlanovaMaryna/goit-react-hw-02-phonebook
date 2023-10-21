@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import css from './Search.module.css'
 
 const Search = ({ onChange, value }) => {
-  return <input value={value} onChange={onChange} />;
+  return <input className={css.searcher} value={value} onChange={onChange} />;
 };
 
 export default Search;

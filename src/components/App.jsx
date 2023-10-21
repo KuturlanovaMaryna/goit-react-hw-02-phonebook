@@ -3,6 +3,7 @@ import ContactForm from './ContactForm/ContactForm'
 import { nanoid } from 'nanoid';
 import Search from "./Search/Search";
 import ContactList from "./ContactList/ContactList";
+import css from './App.module.css'
 
 class App extends Component{
 
@@ -39,14 +40,14 @@ class App extends Component{
 
   render() {
     return (
-      <div>
-        <h1>Phone book</h1>
+      <div className={css.appContainer}>
+        <h1 className={css.titleText}>Phone book</h1>
         <ContactForm
           createUser={this.createUser}
           userNumber={this.state.number}
           userName={this.state.name}
           contacts={this.state.contacts} />
-         <p>Find contacts by name</p>
+         <p className={css.searchText}>Find contacts by name</p>
         <Search onChange={this.handlerSearch} value={this.state.filter} />
         <ContactList
           handleDeleteUser={this.handleDeleteUser}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import css from './ContactForm.module.css'
+import css from './ContactForm.module.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 class ContactForm extends Component {
  state = {
@@ -25,7 +26,7 @@ handleSubmit = (event) => {
         contact => contact.name.toLowerCase() === this.state.name.toLowerCase()
       )
     ) {
-      alert(`${this.state.name} is alredy in your contacts`);
+      Notify.warning(`${this.state.name} is alredy in your contacts`);
       return;
     }
 

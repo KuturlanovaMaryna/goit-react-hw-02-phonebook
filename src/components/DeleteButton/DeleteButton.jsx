@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import css from './DeleteButton.module.css'
 
 const DeleteButton = ({ userId, handleDeleteUser }) => {
-  return <button onClick={() => handleDeleteUser(userId)}>Delete</button>;
+  return <button className={css.deleteBtn} onClick={() => handleDeleteUser(userId)}>Delete</button>;
 };
 
 export default DeleteButton;
