@@ -35,7 +35,7 @@ class App extends Component{
   };
 
   handlerSearch = e => {
-    this.setState({ filter: e.target.value });
+    this.setState({ filter: e.currentTarget.value });
   };
 
   render() {
